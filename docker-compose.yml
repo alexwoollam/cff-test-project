@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  traefik:
+    image: traefik:v2.3.6
+    restart: always
+    command:
+      - --accesslog
+      - --api.insecure=true
+      - --providers.docker
+      - --providers.docker.exposedbydefault=false
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+      - 443:443
+      - 8080:8080
+
+  wordpress:
+    image: wordpress:php7.4-apache
+    depends_on:
+      - mysql
+    restart: always
+    volumes:
+        - ./Src/:/var/www/html
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_NAME=wordpress
+      - WORDPRESS_DB_PASSWORD=password
+    expose:
+      - 80
+      - 443
+    labels:
+      - traefik.enable=true
+      - traefik.protocol=https
+      - traefik.http.routers.wordpress.rule=Host(`traefikwordpress.io`)
+      - trarfik.http.routers.wordpress.tls=true
+
+  mysql:
+    image: mysql:8.0.22
+    restart: always
+    volumes:
+        - db_data:/var/lib/mysql
+    environment:
+      - MYSQL_DATABASE=wordpress
+      - MYSQL_ROOT_PASSWORD=password
+
+volumes:
+    db_data: {}
