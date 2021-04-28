@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html class="no-js no-touchevents" {{ site.language_attributes }}>
+<head>
+    {% block header %}
+        {% include 'global/default-header.twig' %}
+    {% endblock %}
+</head>
+<body {{ function('body_class') }} data-template="default.twig">
+{% block body %}
+    <div class="site-wrapper">
+        {% block main %}
+            <main class="site-content container container--large" id="content">
+                {% block content %}
+                    Sorry, no content
+                {% endblock %}
+            </main>
+        {% endblock %}
+        {% block footer %}
+            {% include 'global/default-footer.twig' %}
+            {{ fn('wp_footer') }}
+        {% endblock %}
+    </div>
+{% endblock %}
+</body>
+</html>

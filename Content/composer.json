@@ -1,0 +1,82 @@
+{
+    "name": "alex/cff",
+    "description": "Twig based wordpress theme",
+    "type": "wordpress-theme",
+    "authors": [
+        {
+            "name": "Alex Woollam",
+            "email": "alex.woollam@proagrica.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+          "Timber\\": "vendor/timber/timber/lib/",
+          "Routes\\": "vendor/upstatement/routes/",
+          "CFF\\": "themes/cff/"
+        },
+        "files": [
+          "themes/cff/Utilities/Functions/Helper.php"
+        ]
+    },
+    "repositories": [
+      {
+        "type": "composer",
+        "url": "https://wpackagist.org"
+      },
+        {
+          "type": "package",
+          "package": {
+              "name": "advancedcustomfields/acf-pro",
+                "type": "wordpress-muplugin",
+              "version": "5.2.5",
+              "dist": {
+                  "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzU2OTF8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTI0IDE0OjE3OjQ0",
+                  "type": "zip"
+              }
+          }
+      }
+    ],
+    "require": {
+      "php": ">=7.3",
+      "twig/twig": "^2.7.1",
+      "wp-cli/wp-cli-bundle": "^2.1@dev",
+      "timber/timber": "dev-master",
+      "advancedcustomfields/acf-pro": "*",
+      "filp/whoops": "^2.12",
+      "johnbillion/query-monitor": "^3.6"
+    },
+    "require-dev": {
+      "squizlabs/php_codesniffer": "^3.6",
+      "wp-coding-standards/wpcs": "^0.14.0",
+      "fig-r/psr2r-sniffer": "^0.5.0",
+      "phpcompatibility/phpcompatibility-wp": "^2.0.0",
+      "dealerdirect/phpcodesniffer-composer-installer": "*",
+      "oomphinc/composer-installers-extender": "*",
+      "roave/security-advisories": "@dev",
+      "brain/monkey": "2.*",
+      "mockery/mockery": "dev-master",
+      "phpunit/phpunit": "^9.1",
+      "hellonico/timber-dump-extension": "dev-master",
+      "10up/wp_mock": "0.4.2",
+      "vimeo/psalm": "^3.16"
+    },
+    "extra": {
+      "installer-paths": {
+        "mu-plugins/acf-pro/": [
+          "advancedcustomfields/acf-pro"
+        ],
+        "mu-plugins/query-monitor": [
+          "johnbillion/query-monitor"
+        ],
+        "mu-plugins/{$name}/": [
+          "type:wordpress-muplugin"
+        ],
+        "plugins/{$name}/": [
+          "type:wordpress-plugin"
+        ],
+        "{$name}/": [
+          "type:wordpress-dropin"
+        ]
+      }
+    }
+  }

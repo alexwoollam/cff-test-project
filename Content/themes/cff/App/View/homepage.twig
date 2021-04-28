@@ -1,0 +1,11 @@
+{% extends "layout/default.twig" %}
+
+{% block content %}
+<h1>
+    Homepage loaded!
+</h1>
+
+<h2> pull some static text to test: {{ fallback.title|whateverify }}</h2>
+
+<p>{{ demo_context }}</p>
+{% endblock %}

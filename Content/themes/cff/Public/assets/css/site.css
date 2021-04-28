@@ -1,0 +1,7 @@
+.site-content{
+    background-color: lightblue;
+}
+
+.site-content > h1{
+    color: lightcoral;
+}

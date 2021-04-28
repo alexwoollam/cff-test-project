@@ -1,0 +1,20 @@
+/*
+Theme Name: Proagrica MVC Twig base.
+Theme URI: https://proagrica.com
+Author: proagrica
+Author URI: https://proagrica.com/
+Description: custom theme
+Version: 0.1a
+Requires PHP: 7.3
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: demo
+Tags: custom
+*/
+
+/* !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ NOTE: This file is cerimonial, its needed 
+ for WP meta.. However, its not enqued
+ DO NOT use it for your css! insted use the
+ Public/style.css
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! */

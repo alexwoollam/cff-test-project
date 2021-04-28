@@ -1,0 +1,16 @@
+
+# Secure settings files:
+/Auth/Userfile
+.env
+
+# Theme cleanup:
+/Content/themes/twenty*
+/Content/themes/index.php
+
+# Plugins handled via composer, no need to commit:
+/Content/plugins
+/Content/mu-plugins
+
+# Removed Composer work files:
+/Content/vendor
+/Content/composer.lock
