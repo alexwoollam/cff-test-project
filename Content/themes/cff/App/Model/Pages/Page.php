@@ -20,10 +20,11 @@ class Page {
 	 * @param [string] $title - the page title.
 	 * @return void
 	 */
-	public static function generate( $title ) {
+	public static function generate( $title, $parent=0 ) {
 		$check_if_the_page_exists = get_page_by_title( $title, 'OBJECT', 'page' );
 		if ( ! $check_if_the_page_exists ) {
 			$post_details = [
+				'post_parent'   => $parent,
 				'post_title'    => $title,
 				'post_content'  => 'Content of your page',
 				'post_status'   => 'publish',

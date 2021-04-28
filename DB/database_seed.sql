@@ -483,7 +483,7 @@ CREATE TABLE IF NOT EXISTS `wp_users` (
 -- Dumping data for table wordpress.wp_users: ~1 rows (approximately)
 /*!40000 ALTER TABLE `wp_users` DISABLE KEYS */;
 REPLACE INTO `wp_users` (`ID`, `user_login`, `user_pass`, `user_nicename`, `user_email`, `user_url`, `user_registered`, `user_activation_key`, `user_status`, `display_name`) VALUES
-	(1, 'badmin', '$P$BCQ8IAQzuXin4zxurEP8XFe61T3TIz1', 'badmin', 'asdames@test.com', 'http://ballencedwordpress.io', '2021-04-23 08:24:10', '', 0, 'badmin');
+	(1, 'badmin', '2c103f2c4ed1e59c0b4e2e01821770fa', 'badmin', 'asdames@test.com', 'http://ballencedwordpress.io', '2021-04-23 08:24:10', '', 0, 'badmin');
 /*!40000 ALTER TABLE `wp_users` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

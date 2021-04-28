@@ -1,11 +1,30 @@
 {
-    "key": "group_6087ec2b03f31",
-    "title": "Page meta",
+    "key": "group_60893c2a75ca1",
+    "title": "test",
     "fields": [
         {
-            "key": "field_6087ec55aec4e",
-            "label": "thing",
-            "name": "thing",
+            "key": "field_60893ce433e8b",
+            "label": "estset",
+            "name": "estset",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_60893ce833e8c",
+            "label": "setsetdsfgdvsf",
+            "name": "setsetdsfgdvsf",
             "type": "text",
             "instructions": "",
             "required": 0,
@@ -27,7 +46,7 @@
             {
                 "param": "post_type",
                 "operator": "==",
-                "value": "page"
+                "value": "post"
             }
         ]
     ],
@@ -39,5 +58,5 @@
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1619520641
+    "modified": 1619606771
 }

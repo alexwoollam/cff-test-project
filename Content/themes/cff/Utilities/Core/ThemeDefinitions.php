@@ -6,7 +6,7 @@ class ThemeDefinitions
 {
     public function Init(){
 
-        $this->theme_path();
+        $this->theme_core_path();
         $this->dev_mode();
         $this->theme_name();
         $this->theme_version();
@@ -15,8 +15,8 @@ class ThemeDefinitions
     /**
      * Define theme path.
      */
-    public function theme_path(){
-        define( 'THEME_PATH', dirname( __FILE__ ) );
+    public function theme_core_path(){
+        define( 'THEME_CORE', dirname( __FILE__ ) );
     }
 
     /**

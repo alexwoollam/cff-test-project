@@ -21,9 +21,8 @@ class PageFactory {
 	 * @var array
 	 */
 	public $pages_to_generate = [
-		'About',
+		'About Us',
 		'Contact',
-		'History',
 	];
 
 	/**
@@ -34,6 +33,7 @@ class PageFactory {
 		$frontpage->generate();
 
 		foreach ( $this->pages_to_generate as $page_title ) {
+
 			$page = new Pages\Page;
 			$page->generate( $page_title );
 		}

@@ -20,6 +20,7 @@ class Core {
 	 */
 	function __construct() {
 	
+		new Acf;
 		new Menus;
 		new Enqueue;
 		new Twig\Functions;
