@@ -1,5 +1,8 @@
 version: '3'
 
+networks:
+  backend:
+
 services:
   traefik:
     image: traefik:v2.3.6
@@ -15,9 +18,9 @@ services:
       - 80:80
       - 443:443
       - 8080:8080
-
+  
   wordpress:
-    image: ${WORDPRESS_IMAGE}
+    build: .
     depends_on:
       - mysql
     restart: always
@@ -33,6 +36,10 @@ services:
           WORDPRESS_CONFIG_EXTRA=
           define('WP_HOME','http://${URL}');
           define('WP_SITEURL','http://${URL}');
+          define('WP_CACHE', true);
+          define('WP_REDIS_HOST', 'redis');
+          define('WP_REDIS_PORT', '6379');
+          define('WP_CACHE_KEY_SALT', '${URL}' );
           require_once( '/var/www/html/wp-content/vendor/autoload.php' );
           (new \Whoops\Run)->pushHandler(new \Whoops\Handler\PrettyPageHandler);
           (new \Whoops\Run)->register();
@@ -53,6 +60,15 @@ services:
     environment:
       - MYSQL_DATABASE=wordpress
       - MYSQL_ROOT_PASSWORD=password
-
+  
+  redis:
+    image: redis:6
+    restart: always
+    ports:
+      - "6379:6379"
+    entrypoint: redis-server
+    labels:
+      - traefik.enable=true
+    
 volumes:
     db_data: {}

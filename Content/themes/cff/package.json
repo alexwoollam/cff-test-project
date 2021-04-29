@@ -1,0 +1,18 @@
+{
+  "name": "cff",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "build": "gulp build --gulpfile ./Src/gulpfile.js",
+    "watch": "gulp watch",
+    "start": "",
+    "package": ""
+  },
+  "keywords": [
+    "devtools"
+  ],
+  "author": "",
+  "license": "ISC"
+}

@@ -43,7 +43,8 @@
       "timber/timber": "dev-master",
       "advancedcustomfields/acf-pro": "*",
       "filp/whoops": "^2.12",
-      "johnbillion/query-monitor": "^3.6"
+      "johnbillion/query-monitor": "^3.6",
+      "rhubarbgroup/redis-cache": "^2.0"
     },
     "require-dev": {
       "squizlabs/php_codesniffer": "^3.6",
@@ -67,6 +68,9 @@
         ],
         "mu-plugins/query-monitor": [
           "johnbillion/query-monitor"
+        ],
+        "mu-plugins/redis-cache": [
+          "rhubarbgroup/redis-cache"
         ],
         "mu-plugins/{$name}/": [
           "type:wordpress-muplugin"
