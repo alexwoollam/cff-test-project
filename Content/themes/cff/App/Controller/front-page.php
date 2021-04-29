@@ -9,6 +9,9 @@ use Timber\Timber;
  */
 class FrontPage implements PageInterface {
 
+	public string $cacheKey;
+	public $home_page_content;
+	
 	/**
 	 * Undocumented variable
 	 *
@@ -24,8 +27,14 @@ class FrontPage implements PageInterface {
 	 * Autofire function
 	 */
 	public function __construct() {
+		$this->cacheKey = 'home_page';
+		$this->home_page_content = wp_cache_get( $this->cacheKey );		
+		if(!$this->home_page_content){
+			$this->home_page_content = $this->static;
+			wp_cache_set( $this->cacheKey, $this->home_page_content );
+		}
 		$this->provide             = Timber::get_context();
-		$this->provide['fallback'] = $this->static;
+		$this->provide['fallback'] = $this->home_page_content;
 		$this->render();
 	}
 
