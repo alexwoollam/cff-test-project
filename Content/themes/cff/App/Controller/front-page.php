@@ -33,8 +33,9 @@ class FrontPage implements PageInterface {
 			$this->home_page_content = $this->static;
 			wp_cache_set( $this->cacheKey, $this->home_page_content );
 		}
-		$this->provide             = Timber::get_context();
-		$this->provide['fallback'] = $this->home_page_content;
+
+		$this->provide         = Timber::get_context();
+		$this->provide['page'] = $this->home_page_content;
 		$this->render();
 	}
 
@@ -45,7 +46,7 @@ class FrontPage implements PageInterface {
 	 * @return void
 	 */
 	public function render(): void {
-		Timber::render( [ 'homepage.twig' ], $provide );
+		Timber::render( [ 'homepage.twig' ], $this->provide );
 	}
 
 }

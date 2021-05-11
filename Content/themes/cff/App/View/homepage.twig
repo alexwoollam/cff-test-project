@@ -2,10 +2,10 @@
 
 {% block content %}
 <h1>
-    Homepage loaded!
+    {{ page.title }}
 </h1>
 
-<h2> pull some static text to test: {{ fallback.title|whateverify }}</h2>
+<h2> {{ page.subtitle }} </h2>
 
 <p>{{ demo_context }}</p>
 

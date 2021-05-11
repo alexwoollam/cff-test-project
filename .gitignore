@@ -14,3 +14,11 @@
 # Removed Composer work files:
 /Content/vendor
 /Content/composer.lock
+
+#Remove terraform generated stuffs.
+.terraform/
+.terraform.lock.hcl
+*.tfvars
+*.tfplan
+*.tfstate
+*.tfstate.backup
