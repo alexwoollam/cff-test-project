@@ -30,7 +30,7 @@
                 "type": "wordpress-muplugin",
               "version": "5.2.5",
               "dist": {
-                  "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=b3JkZXJfaWQ9MzU2OTF8dHlwZT1kZXZlbG9wZXJ8ZGF0ZT0yMDE0LTA3LTI0IDE0OjE3OjQ0",
+                  "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&k=xxx",
                   "type": "zip"
               }
           }
