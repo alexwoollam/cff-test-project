@@ -9,6 +9,6 @@ RUN apt-get install redis-tools -y
 
 RUN apt-get install php-redis -y
 
-RUN cp /etc/php/7.3/mods-available/redis.ini /usr/local/etc/php/conf.d/
+RUN cp /etc/php/7.4/mods-available/redis.ini /usr/local/etc/php/conf.d/
 
 RUN /etc/init.d/apache2 restart
